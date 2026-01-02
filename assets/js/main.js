@@ -215,8 +215,8 @@
 					}).trigger('resize.ie-intro-fix');
 				}
 
-			// Hide intro on scroll (> small).
-				breakpoints.on('>small', function() {
+			// Hide intro on scroll (> medium).
+				breakpoints.on('>medium', function() {
 
 					$main.unscrollex();
 
@@ -234,22 +234,23 @@
 
 				});
 
-			// Hide intro on scroll (<= small).
-				breakpoints.on('<=small', function() {
+			// Hide intro on scroll (<= medium).
+				breakpoints.on('<=medium', function() {
 
 					$main.unscrollex();
 
-					$main.scrollex({
-						mode: 'middle',
-						top: '15vh',
-						bottom: '-15vh',
-						enter: function() {
-							$intro.addClass('hidden');
-						},
-						leave: function() {
-							$intro.removeClass('hidden');
-						}
-					});
+					// Animation disabled for mobile and tablet
+					// $main.scrollex({
+					// 	mode: 'top',
+					// 	top: '5vh',
+					// 	bottom: '100vh',
+					// 	enter: function() {
+					// 		$intro.addClass('hidden');
+					// 	},
+					// 	leave: function() {
+					// 		$intro.removeClass('hidden');
+					// 	}
+					// });
 
 			});
 
