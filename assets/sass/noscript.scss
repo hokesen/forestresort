@@ -27,6 +27,11 @@
 			background-position:	center,								center,														center calc(55vh - 41.25vw);
 		}
 
+		@media screen and (orientation: portrait) {
+			background-size:		auto,								auto,														auto 175%;
+			background-position:	center,								center,														center 86%;
+		}
+
 		&.fade-in {
 			&:before {
 				display: none;

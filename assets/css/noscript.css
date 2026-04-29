@@ -18,6 +18,12 @@
     background-position: center, center, center calc(55vh - 41.25vw);
   }
 }
+@media screen and (orientation: portrait) {
+  #wrapper {
+    background-size: auto, auto, auto 175%;
+    background-position: center, center, center 86%;
+  }
+}
 #wrapper.fade-in:before {
   display: none;
 }

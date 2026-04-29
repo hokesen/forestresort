@@ -2679,6 +2679,7 @@ body.is-preload #wrapper.fade-in:before {
 @media screen and (orientation: portrait) {
   #wrapper > .bg {
     background-size: auto, auto, auto 175%;
+    background-position: center, center, center 86%;
   }
 }
 
@@ -2783,7 +2784,7 @@ body.is-preload #wrapper.fade-in:before {
 }
 #intro h1 .intro-title-lead {
   display: block;
-  margin-bottom: 0.12em;
+  margin-bottom: 0.18em;
 }
 #intro p {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
