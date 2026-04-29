@@ -26,6 +26,10 @@
 			background-attachment:	scroll,								scroll,														scroll;
 			z-index: -1;
 
+			@media screen and (min-aspect-ratio: 4/3) {
+				background-position:	center,								center,														center calc(55vh - 41.25vw);
+			}
+
 			&.fixed {
 				position: fixed;
 				width: 100vw;

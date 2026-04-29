@@ -24,13 +24,13 @@
 		font-family: _font(family-heading);
 		font-size: 0.8rem;
 		font-weight: _font(weight-heading);
-		letter-spacing: 0.075em;
+		letter-spacing: 0;
 		height: 3rem;
 		line-height: 3rem;
 		padding: 0 2rem;
 		text-align: center;
 		text-decoration: none;
-		text-transform: uppercase;
+		text-transform: none;
 		white-space: nowrap;
 
 		&.icon {

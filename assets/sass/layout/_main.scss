@@ -82,26 +82,63 @@
 				flush:				false
 			));
 			width: 100%;
-			padding: 0;
+			gap: 1.5rem;
+			padding: _size(padding);
+			background: #f6f1e9;
 
 			> article {
-				border-color: _palette(border);
-				border-left-width: 2px;
+				background: #ffffff;
+				border-color: rgba(38,49,41,0.14);
+				border-left-width: 1px;
 				border-style: solid;
-				border-top-width: 2px;
-				text-align: center;
+				border-top-width: 1px;
+				border-radius: 8px;
+				box-shadow: 0 1rem 2.75rem rgba(23,33,28,0.08);
+				overflow: hidden;
+				text-align: left;
+
+				header {
+					margin-bottom: 1rem;
+				}
+
+				h2 {
+					font-size: 1.45rem;
+				}
+
+				p {
+					color: _palette(fg-light);
+					font-size: 0.95rem;
+					line-height: 1.65;
+					text-align: left;
+				}
+
+				.image {
+					border-radius: 6px;
+					margin-bottom: 1.35rem;
+					overflow: hidden;
+				}
 
 				> :last-child {
 					margin-bottom: 0;
 				}
 
+				&:nth-child(n) {
+					border-left-width: 1px;
+					border-top-width: 1px;
+				}
+
 				&:nth-child(2n - 1) {
-					border-left-width: 0;
+					border-left-width: 1px;
 				}
 
 				&:nth-child(-n + 2) {
-					border-top-width: 0;
+					border-top-width: 1px;
 				}
+			}
+
+			> * {
+				padding: _size(padding);
+				width: calc(50% - 0.75rem);
 			}
 
 			@include breakpoint('<=medium') {
@@ -110,6 +147,14 @@
 					gutters:			(_size(padding) * 2.5),
 					flush:				false
 				));
+
+				gap: 1.25rem;
+				padding: _size(padding) * 0.75;
+
+				> * {
+					padding: _size(padding) * 0.9;
+					width: calc(50% - 0.625rem);
+				}
 			}
 
 			@include breakpoint('<=small') {
@@ -120,25 +165,35 @@
 					flush:				false
 				));
 
+				gap: 1rem;
+				padding: _size(padding) * 0.75;
+
+				> * {
+					padding: _size(padding) * 0.85;
+					width: 100%;
+				}
+
 				> article {
+					border-width: 1px;
+
 					&:nth-child(2n - 1) {
-						border-left-width: 2px;
+						border-left-width: 1px;
 					}
 
 					&:nth-child(-n + 2) {
-						border-top-width: 2px;
+						border-top-width: 1px;
 					}
 
 					&:nth-child(n) {
-						border-left-width: 0;
+						border-left-width: 1px;
 					}
 
 					&:nth-child(-n + 1) {
-						border-top-width: 0;
+						border-top-width: 1px;
 					}
 
 					.image {
-						max-width: 25rem;
+						max-width: none;
 						margin-left: auto;
 						margin-right: auto;
 					}

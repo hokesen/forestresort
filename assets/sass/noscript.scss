@@ -23,6 +23,10 @@
 		background-repeat:		repeat,								no-repeat,													no-repeat;
 		background-attachment:	fixed,								fixed,														fixed;
 
+		@media screen and (min-aspect-ratio: 4/3) {
+			background-position:	center,								center,														center calc(55vh - 41.25vw);
+		}
+
 		&.fade-in {
 			&:before {
 				display: none;

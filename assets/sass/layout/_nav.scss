@@ -14,7 +14,7 @@
 			'transform 1s ease',
 			'opacity 1s ease'
 		));
-		background: rgba(255,255,255,0.175);
+		background: rgba(23,33,28,0.78);
 		height: 4rem;
 		line-height: 4rem;
 		margin: -4rem auto 0 auto;
@@ -31,27 +31,30 @@
 				@include vendor('flex-grow', '1');
 				@include vendor('flex-shrink', '1');
 				font-family: _font(family-heading);
-				font-weight: _font(weight-heading);
-				letter-spacing: 0.075em;
+				font-weight: _font(weight-bold);
+				letter-spacing: 0;
 				list-style: none;
 				margin-bottom: 0;
 				padding-left: 0;
-				text-transform: uppercase;
+				text-transform: none;
 
 				li {
 					display: block;
 					padding-left: 0;
 
-					a {
+					a,
+					span {
 						@include vendor('transition', (
 							'background-color #{_duration(transition)} ease-in-out',
 							'color #{_duration(transition)} ease-in-out'
 						));
 						display: block;
-						font-size: 0.8rem;
+						font-size: 0.9rem;
 						outline: none;
 						padding: 0 2rem;
+					}
 
+					a {
 						&:hover {
 							color: inherit !important;
 							background-color: transparentize(_palette(invert, fg), 0.9);
@@ -59,11 +62,14 @@
 					}
 
 					&.active {
-						background-color: _palette(invert, fg);
+						background-color: rgba(255,255,255,0.94);
+
+						a,
+						span {
+							color: _palette(invert, bg);
+						}
 
 						a {
-							color: _palette(invert, bg);
-
 							&:hover {
 								color: _palette(invert, accent) !important;
 							}

@@ -118,10 +118,12 @@
 		});
 
 	// Scrolly.
-		$('.scrolly').scrolly();
+		$('.scrolly').scrolly({
+			speed: 700
+		});
 
 	// Background.
-		$wrapper._parallax(0.925);
+		$wrapper._parallax(0.35);
 
 	// Nav Panel.
 
@@ -221,9 +223,9 @@
 					$main.unscrollex();
 
 					$main.scrollex({
-						mode: 'bottom',
-						top: '25vh',
-						bottom: '-50vh',
+						mode: 'top',
+						top: '10vh',
+						bottom: 0,
 						enter: function() {
 							$intro.addClass('hidden');
 						},
