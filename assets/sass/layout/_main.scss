@@ -76,33 +76,31 @@
 		> .posts {
 			@include fixed-grid((
 				columns:			2,
-				gutters:			(_size(padding) * 4),
+				gutters:			(_size(padding) * 1.5),
 				horizontal-align:	center,
 				vertical-align:		flex-start,
 				flush:				false
 			));
 			width: 100%;
-			gap: 1.5rem;
-			padding: _size(padding);
+			gap: 1rem;
+			padding: _size(padding) * 0.65;
 			background: #f6f1e9;
 
 			> article {
-				background: #ffffff;
-				border-color: rgba(38,49,41,0.14);
-				border-left-width: 1px;
-				border-style: solid;
-				border-top-width: 1px;
-				border-radius: 8px;
-				box-shadow: 0 1rem 2.75rem rgba(23,33,28,0.08);
-				overflow: hidden;
+				background: transparent;
+				border: 0;
+				border-radius: 0;
+				box-shadow: none;
+				overflow: visible;
 				text-align: left;
 
 				header {
-					margin-bottom: 1rem;
+					margin-bottom: 0;
 				}
 
 				h2 {
-					font-size: 1.45rem;
+					font-size: 1.35rem;
+					margin: 0;
 				}
 
 				p {
@@ -113,85 +111,54 @@
 				}
 
 				.image {
-					border-radius: 6px;
-					margin-bottom: 1.35rem;
+					border-radius: 4px;
+					margin: 0.8rem 0 1rem 0;
 					overflow: hidden;
 				}
 
 				> :last-child {
 					margin-bottom: 0;
 				}
-
-				&:nth-child(n) {
-					border-left-width: 1px;
-					border-top-width: 1px;
-				}
-
-				&:nth-child(2n - 1) {
-					border-left-width: 1px;
-				}
-
-				&:nth-child(-n + 2) {
-					border-top-width: 1px;
-				}
 			}
 
 			> * {
-				padding: _size(padding);
-				width: calc(50% - 0.75rem);
+				padding: _size(padding) * 0.35;
+				width: calc(50% - 0.5rem);
 			}
 
 			@include breakpoint('<=medium') {
 				@include fixed-grid-resize((
 					columns:			2,
-					gutters:			(_size(padding) * 2.5),
+					gutters:			(_size(padding) * 1.25),
 					flush:				false
 				));
 
-				gap: 1.25rem;
-				padding: _size(padding) * 0.75;
+				gap: 0.85rem;
+				padding: _size(padding) * 0.55;
 
 				> * {
-					padding: _size(padding) * 0.9;
-					width: calc(50% - 0.625rem);
+					padding: _size(padding) * 0.3;
+					width: calc(50% - 0.425rem);
 				}
 			}
 
 			@include breakpoint('<=small') {
 				@include fixed-grid-resize((
 					columns:			1,
-					gutters:			(_size(padding) * 2),
+					gutters:			(_size(padding) * 1),
 					prev-columns:		2,
 					flush:				false
 				));
 
-				gap: 1rem;
-				padding: _size(padding) * 0.75;
+				gap: 1.25rem;
+				padding: _size(padding) * 0.55;
 
 				> * {
-					padding: _size(padding) * 0.85;
+					padding: _size(padding) * 0.2;
 					width: 100%;
 				}
 
 				> article {
-					border-width: 1px;
-
-					&:nth-child(2n - 1) {
-						border-left-width: 1px;
-					}
-
-					&:nth-child(-n + 2) {
-						border-top-width: 1px;
-					}
-
-					&:nth-child(n) {
-						border-left-width: 1px;
-					}
-
-					&:nth-child(-n + 1) {
-						border-top-width: 1px;
-					}
-
 					.image {
 						max-width: none;
 						margin-left: auto;
