@@ -2682,6 +2682,16 @@ body.is-preload #wrapper.fade-in:before {
     background-position: center, center, center 86%;
   }
 }
+@media screen and (max-width: 736px) {
+  #wrapper > .bg,
+  #wrapper > .bg.fixed {
+    position: absolute;
+    height: 75vw;
+    background-size: auto, auto, 100% auto;
+    background-position: center, center, top center;
+    background-attachment: scroll, scroll, scroll;
+  }
+}
 
 /* Intro */
 #intro {
@@ -2871,22 +2881,38 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 @media screen and (max-width: 736px) {
   #intro {
-    padding: 3.5rem 2rem 4rem 2rem;
-    min-height: 78vh;
+    padding: calc(75vw + 2rem) 2rem 2.5rem 2rem;
+    min-height: 0;
   }
   #intro h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
     line-height: 1.14;
     letter-spacing: 0;
     margin-bottom: 1rem;
+  }
+  #intro h1 .intro-title-lead {
+    white-space: nowrap;
   }
   #intro p {
     font-size: 1rem;
     line-height: 1.55;
     margin-top: 0.25rem;
+    margin-bottom: 0;
   }
   #intro .actions {
     display: none;
+  }
+  #intro + #header {
+    margin-top: -14rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  #intro {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #intro h1 {
+    font-size: 1.55rem;
   }
 }
 

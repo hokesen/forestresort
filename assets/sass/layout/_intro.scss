@@ -124,24 +124,42 @@
 		}
 
 		@include breakpoint('<=small') {
-			padding: 3.5rem 2rem 4rem 2rem;
-			min-height: 78vh;
+			padding: calc(75vw + 2rem) 2rem 2.5rem 2rem;
+			min-height: 0;
 
 			h1 {
-				font-size: 2.25rem;
+				font-size: 2rem;
 				line-height: 1.14;
 				letter-spacing: 0;
 				margin-bottom: _size(element-margin) * 0.5;
+
+				.intro-title-lead {
+					white-space: nowrap;
+				}
 			}
 
 			p {
 				font-size: 1rem;
 				line-height: 1.55;
 				margin-top: 0.25rem;
+				margin-bottom: 0;
 			}
 
 			.actions {
 				display: none;
+			}
+
+			& + #header {
+				margin-top: -14rem;
+			}
+		}
+
+		@include breakpoint('<=xxsmall') {
+			padding-left: 1rem;
+			padding-right: 1rem;
+
+			h1 {
+				font-size: 1.55rem;
 			}
 		}
 	}

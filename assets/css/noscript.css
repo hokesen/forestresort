@@ -24,6 +24,13 @@
     background-position: center, center, center 86%;
   }
 }
+@media screen and (max-width: 736px) {
+  #wrapper {
+    background-size: auto, auto, 100% auto;
+    background-position: center, center, top center;
+    background-attachment: scroll, scroll, scroll;
+  }
+}
 #wrapper.fade-in:before {
   display: none;
 }
