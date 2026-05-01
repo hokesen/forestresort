@@ -16,6 +16,7 @@
 		margin: 0 auto;
 		width: calc(100% - #{_size(padding) * 2});
 		max-width: _size(wrapper);
+		box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.12);
 		z-index: 2;
 
 		> section {
@@ -99,9 +100,14 @@
 
 		.agent-logo {
 			display: block;
-			max-width: 16rem;
+			max-width: 14.5rem;
 			width: 100%;
-			margin-bottom: 1.25rem;
+			margin-bottom: 1rem;
+		}
+
+		.media-link {
+			color: _palette(alt, fg-bold);
+			font-weight: _font(weight-bold);
 		}
 
 		@include breakpoint('<=medium') {
