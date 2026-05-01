@@ -125,6 +125,10 @@
 				> :last-child {
 					margin-bottom: 0;
 				}
+
+				&.area-map {
+					grid-column: 1 / -1;
+				}
 			}
 
 			> * {

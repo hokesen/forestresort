@@ -3282,6 +3282,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #main > .posts > article > :last-child {
   margin-bottom: 0;
 }
+#main > .posts > article.area-map {
+  grid-column: 1/-1;
+}
 #main > .posts > * {
   padding: 0.7rem;
   width: auto;
