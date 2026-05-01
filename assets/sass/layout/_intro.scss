@@ -25,37 +25,41 @@
 		min-height: 92vh;
 
 		h1 {
-			font-size: 3.25rem;
-			line-height: 1.12;
+			font-size: 4.2rem;
+			line-height: 1.05;
 			letter-spacing: 0;
-			max-width: 13em;
+			margin-bottom: 0.45rem;
+			max-width: 11em;
 			text-shadow: 0 0.2rem 1.5rem rgba(0,0,0,0.5);
-
-			.intro-title-lead {
-				display: block;
-				margin-bottom: 0.18em;
-			}
 		}
 
 		p {
 			font-family: _font(family);
-			font-size: 1.05rem;
+			font-size: 1.15rem;
 			font-style: normal;
 			font-weight: 500;
 			line-height: 1.55;
-			margin-top: 0.25rem;
+			margin-top: 0.35rem;
 			max-width: 46rem;
 			text-align: center;
 			text-shadow: 0 0.12rem 1rem rgba(0,0,0,0.45);
+		}
 
-			span {
-				display: block;
+		.intro-kicker {
+			font-size: 1.35rem;
+			font-weight: 600;
+			margin-bottom: 0.85rem;
+		}
 
-				&:first-child {
-					font-size: 1.15em;
-					font-weight: 600;
-				}
-			}
+		.intro-address {
+			font-size: 1.3rem;
+			font-weight: 600;
+			line-height: 1.4;
+			margin-bottom: 0.4rem;
+		}
+
+		.intro-summary {
+			max-width: 40rem;
 		}
 
 		.actions {
@@ -109,7 +113,7 @@
 			min-height: 86vh;
 
 			h1 {
-				font-size: 2.7rem;
+				font-size: 3.35rem;
 			}
 
 			p {
@@ -128,21 +132,26 @@
 			min-height: 0;
 
 			h1 {
-				font-size: 2rem;
-				line-height: 1.14;
+				font-size: 2.4rem;
+				line-height: 1.08;
 				letter-spacing: 0;
 				margin-bottom: _size(element-margin) * 0.5;
-
-				.intro-title-lead {
-					white-space: nowrap;
-				}
 			}
 
 			p {
-				font-size: 1rem;
+				font-size: 1.05rem;
 				line-height: 1.55;
 				margin-top: 0.25rem;
 				margin-bottom: 0;
+			}
+
+			.intro-kicker {
+				font-size: 1.1rem;
+				margin-bottom: 0.65rem;
+			}
+
+			.intro-address {
+				font-size: 1.05rem;
 			}
 
 			.actions {
@@ -159,7 +168,7 @@
 			padding-right: 1rem;
 
 			h1 {
-				font-size: 1.55rem;
+				font-size: 2rem;
 			}
 		}
 	}
