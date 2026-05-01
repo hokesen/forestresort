@@ -3286,6 +3286,16 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   padding: 0.7rem;
   width: auto;
 }
+#main > .posts .section-heading {
+  grid-column: 1/-1;
+  padding: 0 0 0.35rem 0;
+  text-align: center;
+}
+#main > .posts .section-heading h2 {
+  font-size: 2rem;
+  margin: 0;
+  text-wrap: balance;
+}
 @media screen and (max-width: 980px) {
   #main > .posts > * {
     width: 50%;
@@ -3301,6 +3311,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   #main > .posts > * {
     padding: 0.5rem;
     width: auto;
+  }
+  #main > .posts .section-heading {
+    padding-bottom: 0.25rem;
+  }
+  #main > .posts .section-heading h2 {
+    font-size: 1.75rem;
   }
 }
 @media screen and (max-width: 736px) {
