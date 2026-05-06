@@ -3210,6 +3210,77 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     margin: 0 0 1.5rem 0;
   }
 }
+#main > .mobile-explore {
+  display: none;
+  background: #fbfaf7;
+}
+#main > .mobile-explore + .posts {
+  border-top: 0;
+}
+#main > .mobile-explore h2 {
+  font-size: 1.45rem;
+  line-height: 1.2;
+  margin: 0 0 0.85rem 0;
+  text-align: center;
+}
+#main > .mobile-explore .explore-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#main > .mobile-explore .explore-links li {
+  padding-left: 0;
+}
+#main > .mobile-explore .explore-links a {
+  -moz-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  align-items: center;
+  background: #f5efe5;
+  border: solid 1px #ded8cd;
+  border-radius: 6px;
+  color: #263129;
+  display: flex;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 2.7rem;
+  padding: 0.55rem 0.65rem;
+  text-align: center;
+}
+#main > .mobile-explore .explore-links a:hover {
+  background: #fbfaf7;
+  border-color: #aeab9f;
+  color: #263129 !important;
+}
+@media screen and (max-width: 980px) {
+  #main > .mobile-explore {
+    display: block;
+    padding: 1.25rem 1.3rem 1.25rem 1.3rem;
+  }
+}
+@media screen and (max-width: 736px) {
+  #main > .mobile-explore {
+    padding: 1.2rem 1.3rem 1.2rem 1.3rem;
+  }
+  #main > .mobile-explore .explore-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  #main > .mobile-explore .explore-links .explore-link-wide {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (max-width: 360px) {
+  #main > .mobile-explore .explore-links {
+    grid-template-columns: 1fr;
+  }
+}
 #main > .posts {
   display: -moz-flex;
   display: -webkit-flex;
